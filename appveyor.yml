@@ -3,12 +3,14 @@ image: Visual Studio 2015
 before_build:
 - ps: dotnet restore
 build:
-  publish_wap: false
+  publish_wap: true
   publish_azure: true
-  publish_nuget: false
-  publish_nuget_symbols: false
+  publish_nuget: true
+  publish_nuget_symbols: true
   include_nuget_references: true
   verbosity: detailed
 artifacts:
 - path: Faradazure.cspkg
   name: FaradAzure
+on_success:
+- cmd: dir/s

@@ -3,10 +3,10 @@ image: Visual Studio 2015
 before_build:
 - ps: dotnet restore
 build:
-  publish_wap: true
+  publish_wap: false
   publish_azure: true
-  publish_nuget: true
-  publish_nuget_symbols: true
+  publish_nuget: false
+  publish_nuget_symbols: false
   include_nuget_references: true
   verbosity: detailed
 artifacts:

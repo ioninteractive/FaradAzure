@@ -12,5 +12,3 @@ build:
 artifacts:
 - path: Faradazure.cspkg
   name: FaradAzure
-on_success:
-- cmd: dir/s

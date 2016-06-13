@@ -27,9 +27,9 @@ deploy:
 - provider: WebDeploy
   server: https://faradazure.scm.azurewebsites.net/msdeploy.axd
   website: faradazure
-  username: storchia@outlook.com
+  username: $faradazure
   password:
-    secure: TKxZ09UEvO0V6RLIYh8zDxHPowW1XmHgA/8DrOHoYV4=
+    secure: TWBudPLm0AmwnhESbdoMoh8BM2NGA5eic6krSMBQgjMS+uhnbINvHKSCWTU6PccdlerOlPGwKhdgXTa9BUXt6g==
   artifact: FaradAzureArtifacts
   aspnet_core: true
 

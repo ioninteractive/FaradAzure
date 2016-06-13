@@ -17,14 +17,14 @@ build:
 after_build:
 - dir/s
 - dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
-- dir AppOutput\FaradAzure\wwwroot
+- dir AppOutput\FaradAzure
 
 artifacts:
-- path: AppOutput\FaradAzure\wwwroot
+- path: AppOutput\FaradAzure
   name: FaradAzureArtifacts
 
 deploy:
 
 on_success:
  - dir AppOutput\FaradAzure\wwwroot
- - echo: yay!
+ - echo yay!

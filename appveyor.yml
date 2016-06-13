@@ -29,7 +29,7 @@ deploy:
   website: faradazure
   username: storchia@outlook.com
   password:
-    secure: QrkqA5ZbBzcMomKdEGgPGA==
+    secure: TKxZ09UEvO0V6RLIYh8zDxHPowW1XmHgA/8DrOHoYV4=
   artifact: FaradAzureArtifacts
   aspnet_core: true
 

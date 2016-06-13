@@ -25,7 +25,7 @@ artifacts:
 
 deploy:
 - provider: WebDeploy
-  server: http://faradazure.azurewebsites.net
+  server: https://faradazure.scm.azurewebsites.net/msdeploy.axd
   website: faradazure
   username: storchia@outlook.com
   password:

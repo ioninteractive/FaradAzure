@@ -15,9 +15,7 @@ build:
   verbosity: minimal
   
 after_build:
-- dir/s
 - dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
-- dir AppOutput\FaradAzure
 
 artifacts:
 - path: AppOutput\FaradAzure
@@ -32,8 +30,8 @@ deploy:
     secure: TWBudPLm0AmwnhESbdoMoh8BM2NGA5eic6krSMBQgjMS+uhnbINvHKSCWTU6PccdlerOlPGwKhdgXTa9BUXt6g==
   artifact: FaradAzureArtifacts
   aspnet_core: true
+  aspnet_core_force_restart: true
 
 
 on_success:
- - dir AppOutput\FaradAzure\wwwroot
  - echo yay!

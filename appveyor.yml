@@ -30,7 +30,7 @@ deploy:
   username: storchia@outlook.com
   password:
     secure: QrkqA5ZbBzcMomKdEGgPGA==
-  artifact: FaradAzureArtifacts.zip
+  artifact: FaradAzureArtifacts
   aspnet_core: true
 
 

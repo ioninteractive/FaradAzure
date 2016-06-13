@@ -8,6 +8,12 @@ build:
 
   include_nuget_references: true
   verbosity: minimal
+  
+after_build:
+- dotnet publish FaradAzure -o AppOutput\FaradAzure --configuration Release 
+- dir AppOutput\FaradAzure\wwwroot
+- type AppOutput\FaradAzure\wwwroot\web.config
+
 artifacts:
 - path: src\FaradAzure\bin\Release
   name: FaradAzureArtifacts
@@ -15,5 +21,5 @@ artifacts:
 deploy:
 
 on_success:
- - dir src\FaradAzure\bin\Release
+ - dir ''%appveyor_build_folder%\AppOutput\DeployTest\wwwroot''
  - echo: yay!

@@ -24,6 +24,15 @@ artifacts:
   name: FaradAzureArtifacts
 
 deploy:
+- provider: WebDeploy
+  server: http://faradazure.azurewebsites.net
+  website: faradazure
+  username: storchia@outlook.com
+  password:
+    secure: QrkqA5ZbBzcMomKdEGgPGA==
+  artifact: FaradAzureArtifacts.zip
+  aspnet_core: true
+
 
 on_success:
  - dir AppOutput\FaradAzure\wwwroot

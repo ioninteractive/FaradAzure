@@ -1,16 +1,18 @@
 version: 1.0.{build}
 image: Visual Studio 2015
+init:
+- appveyor version
 before_build:
 - ps: dotnet restore
 build:
-  publish_wap: true
-  publish_azure: true
-  publish_nuget: true
-  publish_nuget_symbols: true
+
   include_nuget_references: true
-  verbosity: detailed
+  verbosity: minimal
 artifacts:
-- path: Faradazure.cspkg
-  name: FaradAzure
+- path: src\FaradAzure\bin\Release
+  name: FaradAzureArtifacts
+
+deploy:
 +on_success:
- +- cmd: dir
+ +- dir src\FaradAzure\bin\Release
+ +- echo: yay!

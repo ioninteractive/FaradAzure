@@ -2,6 +2,9 @@ version: 1.0.{build}
 image: Visual Studio 2015
 init:
 - appveyor version
+
+cache: C:\Users\appveyor\.nuget\packages
+
 before_build:
 - ps: dotnet restore
 build:
@@ -10,7 +13,7 @@ build:
   verbosity: minimal
   
 after_build:
-- dir dir/s
+- dir/s
 - dotnet publish FaradAzure -o AppOutput\FaradAzure --configuration Release 
 - dir AppOutput\FaradAzure\wwwroot
 - type AppOutput\FaradAzure\wwwroot\web.config

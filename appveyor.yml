@@ -3,6 +3,8 @@ image: Visual Studio 2015
 init:
 - appveyor version
 
+configuration: Release
+
 cache: C:\Users\appveyor\.nuget\packages
 
 before_build:

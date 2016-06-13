@@ -13,6 +13,7 @@ artifacts:
   name: FaradAzureArtifacts
 
 deploy:
-+on_success:
- +- dir src\FaradAzure\bin\Release
- +- echo: yay!
+
+on_success:
+ - dir src\FaradAzure\bin\Release
+ - echo: yay!

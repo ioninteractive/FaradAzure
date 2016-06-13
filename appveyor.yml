@@ -18,14 +18,13 @@ after_build:
 - dir/s
 - dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
 - dir AppOutput\FaradAzure\wwwroot
-- type AppOutput\FaradAzure\wwwroot\web.config
 
 artifacts:
-- path: src\FaradAzure\bin\Release
+- path: AppOutput\FaradAzure\wwwroot
   name: FaradAzureArtifacts
 
 deploy:
 
 on_success:
- - dir ''%appveyor_build_folder%\AppOutput\DeployTest\wwwroot''
+ - dir AppOutput\FaradAzure\wwwroot
  - echo: yay!

@@ -25,9 +25,9 @@ deploy:
 - provider: WebDeploy
   server: https://faradazure.scm.azurewebsites.net/msdeploy.axd
   website: faradazure
-  username: $faradazure
+  username: $Faradazure
   password:
-    secure: TWBudPLm0AmwnhESbdoMoh8BM2NGA5eic6krSMBQgjMS+uhnbINvHKSCWTU6PccdlerOlPGwKhdgXTa9BUXt6g==
+    secure: WtLm8pzTuN78b0TpynMr7wmAwAPzyWRrj8fx1KZQEhcxor5ZYrqsqkGBikL6
   artifact: FaradAzureArtifacts
   aspnet_core: true
   aspnet_core_force_restart: true

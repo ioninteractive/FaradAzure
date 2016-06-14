@@ -27,7 +27,7 @@ deploy:
   website: faradazure
   username: $Faradazure
   password:
-    secure: WtLm8pzTuN78b0TpynMr7wmAwAPzyWRrj8fx1KZQEhcxor5ZYrqsqkGBikL6
+    secure: BdRSLnrDbgh0fywAvc2pHHP7oASJsACbhQVgpfexrwkqgHxvvtOxE7Aco6x/MXCOMgeaUwV7Dk68NlSs5VKMGg==
   artifact: FaradAzureArtifacts
   aspnet_core: true
   aspnet_core_force_restart: true

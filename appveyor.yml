@@ -8,7 +8,7 @@ configuration: Release
 cache: C:\Users\appveyor\.nuget\packages
 
 before_build:
-#- ps: dotnet restore
+- ps: dotnet restore
 build:
 
   include_nuget_references: true

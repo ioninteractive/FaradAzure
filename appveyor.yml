@@ -30,8 +30,8 @@ deploy:
     secure: UcuZc9Ivl/qfyi+nV7Efev+bVql1wClUmEwmZ6E3GZso+926DWEa8xqV9tboecriWMkbsiQfLcx/5Qky3NWcuQ==
   artifact: FaradAzureArtifacts
   aspnet_core: true
+  app_offline: true
   aspnet_core_force_restart: true
-
 
 on_success:
  - echo yay!

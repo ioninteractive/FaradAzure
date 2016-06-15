@@ -23,11 +23,11 @@ artifacts:
 
 deploy:
 - provider: WebDeploy
-  server: https://faradazure.scm.azurewebsites.net/msdeploy.axd
+  server: https://faradazure.scm.azurewebsites.net:443
   website: faradazure
-  username: $Faradazure
+  username: $faradazure
   password:
-    secure: BdRSLnrDbgh0fywAvc2pHHP7oASJsACbhQVgpfexrwkqgHxvvtOxE7Aco6x/MXCOMgeaUwV7Dk68NlSs5VKMGg==
+    secure: wlnolq/xm9uvCaEVV5cWJw6WcLdKkug6yZ/odicoc4gviRRj5exxYTr/3f55xF3jWCF6tq0xC20D+EtHDeFYJA==
   artifact: FaradAzureArtifacts
   aspnet_core: true
   aspnet_core_force_restart: true

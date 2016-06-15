@@ -15,10 +15,9 @@ build:
   verbosity: minimal
   
 after_build:
+- dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
 - dir AppOutput\FaradAzure
 - type AppOutput\FaradAzure\wwwroot
-- dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
-
 
 artifacts:
 - path: AppOutput\FaradAzure

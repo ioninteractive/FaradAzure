@@ -17,7 +17,7 @@ build:
 after_build:
 - dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
 - dir AppOutput\FaradAzure
-- type AppOutput\FaradAzure\wwwroot
+- type AppOutput\FaradAzure\wwwroot\web.config
 
 artifacts:
 - path: AppOutput\FaradAzure

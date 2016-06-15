@@ -15,11 +15,10 @@ build:
   verbosity: minimal
   
 after_build:
-- dir AppOutput\FaradAzure\wwwroot\web.config
-- type AppOutput\FaradAzure\wwwroot\web.config
+- dir AppOutput\FaradAzure
+- type AppOutput\FaradAzure\wwwroot
 - dotnet publish src\FaradAzure\project.json -o AppOutput\FaradAzure --configuration Release 
-- dir AppOutput\FaradAzure\wwwroot\web.config
-- type AppOutput\FaradAzure\wwwroot\web.config
+
 
 artifacts:
 - path: AppOutput\FaradAzure

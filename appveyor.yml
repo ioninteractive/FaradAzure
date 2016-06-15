@@ -23,7 +23,7 @@ artifacts:
 
 deploy:
 - provider: WebDeploy
-  server: https://faradazure.scm.azurewebsites.net
+  server: https://faradazure.scm.azurewebsites.net/msdeploy.axd
   website: faradazure
   username: $faradazure
   password:

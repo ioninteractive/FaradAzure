@@ -11,3 +11,4 @@ for how easy it is to wire auth up in asp.net core middleware.
 http://go.stormpath.com/stormpath-vs.-auth0-new?gclid=CIOdhqjzr80CFVAjgQodbywPLQ
 
 2. Another comparison
+http://onehungrymind.com/auth0-vs-stormpath/

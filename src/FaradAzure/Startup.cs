@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Stormpath.AspNetCore;
+using Stormpath.Configuration.Abstractions;
 using FaradAzure.Data;
 using FaradAzure.Models;
 using FaradAzure.Services;
@@ -39,6 +41,57 @@ namespace FaradAzure
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // By default, the Stormpath SDK will look for the 
+            // API Key ID, API Key Secret, and Application href in environment variables.
+            // You can optionally pass configuration here instead, if you want.
+            // Instantiate an object of type Stormpath.Configuration.Abstractions.StormpathConfiguration 
+            // to configure the SDK via code.
+            services.AddStormpath(new Stormpath.Configuration.Abstractions.StormpathConfiguration
+            {
+                Application = new Stormpath.Configuration.Abstractions.ApplicationConfiguration()
+                {
+                    Name = "My Application"
+                },
+
+                // https://docs.stormpath.com/dotnet/aspnetcore/latest/configuration.html#default-features
+                Web = new WebConfiguration()
+                {
+                    ForgotPassword = new WebForgotPasswordRouteConfiguration()
+                    {
+                        Enabled = false
+                    },
+                    ChangePassword = new WebChangePasswordRouteConfiguration()
+                    {
+                        Enabled = false
+                    },
+                    //Login = new WebLoginRouteConfiguration()
+                    //{
+                    //    Enabled = false,
+                    //},
+                    //Logout = new WebLogoutRouteConfiguration()
+                    //{
+                    //    Enabled = false
+                    //},
+                    Me = new WebMeRouteConfiguration()
+                    {
+                        Enabled = false
+                    },
+                    Oauth2 = new WebOauth2RouteConfiguration()
+                    {
+                        Enabled = false
+                    },
+                    Register = new WebRegisterRouteConfiguration()
+                    {
+                        Enabled = false
+                    },
+                    VerifyEmail = new WebVerifyEmailRouteConfiguration()
+                    {
+                        Enabled = false
+                    }
+                }
+
+            });
+
             // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -76,6 +129,8 @@ namespace FaradAzure
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
+
+            app.UseStormpath();
 
             app.UseMvc(routes =>
             {

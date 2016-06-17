@@ -12,3 +12,5 @@ http://go.stormpath.com/stormpath-vs.-auth0-new?gclid=CIOdhqjzr80CFVAjgQodbywPLQ
 
 2. Another comparison
 http://onehungrymind.com/auth0-vs-stormpath/
+
+3. One other thing to note is that if we want an SLA we will be paying enterprise tier pricing for most both of these solutions
